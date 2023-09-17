@@ -27,9 +27,8 @@ import {
   CommandSeparator,
 } from "./ui/command";
 
-type PopoverTriggerProps = React.ComponentPropsWithoutRef<
-  typeof PopoverTrigger
->;
+type PopoverTriggerProps = React.ComponentPropsWithoutRef<typeof PopoverTrigger>
+
 
 interface StoreSwitcherProps extends PopoverTriggerProps {
   items: Store[];
@@ -69,6 +68,7 @@ export default function StoreSwitcher({
           aria-expanded={open}
           aria-label="Select a store"
           className={cn("w-[200px] justify-between", className)}
+          aria-controls=""
         >
           <StoreIcon className="mr-2 h-4 w-4" />
           {currentStore?.label}
